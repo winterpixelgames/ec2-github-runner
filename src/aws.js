@@ -13,7 +13,7 @@ async function startEc2Instance(label, githubRegistrationToken) {
     'curl -O -L https://github.com/actions/runner/releases/download/v2.277.1/actions-runner-linux-x64-2.277.1.tar.gz',
     'tar xzf ./actions-runner-linux-x64-2.275.1.tar.gz',
     'export RUNNER_ALLOW_RUNASROOT=1',
-    'export HOME=/root'
+    'export HOME=/root',
     `./config.sh --url https://github.com/${config.githubContext.owner}/${config.githubContext.repo} --token ${githubRegistrationToken} --labels ${label}`,
     './run.sh',
   ];
